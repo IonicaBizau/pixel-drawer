@@ -1,0 +1,133 @@
+/*
+   Author: Ionica Bizau
+   Email: bizauionica@gmail.com
+   Copyright (C) 2013 Ionica Bizau
+   Under GNU License
+   -------------------------------
+   STYLES FOR ASCII DRAW PROJECT
+   -------------------------------
+*/
+
+/* general */
+input[type="text"] {
+    height: 30px;
+}
+
+body {
+    background: url("../img/bg.png");
+}
+
+.dotted-blue {
+    border: 2px darkblue dotted;
+    background: lightblue;
+    padding: 20px;
+    margin: 5px;
+}
+
+/*
+     ////////////////
+    // Drawing... //
+   ////////////////
+*/
+
+/* Drawing area */
+.draw-area {
+    text-align: center;
+}
+
+.canvas {
+    font-family: monospace;
+    margin: 15px;
+        
+    /* Unselectable text */
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.canvas .pixel {
+    display: inline-block;
+    font-size: 18px;
+    cursor: crosshair;
+    
+}
+
+.template {
+    display: none;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+}
+
+/*
+     ///////////////
+    // Colors... //
+   ///////////////
+*/
+
+/* color styles */
+.color {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border: 1px #aaa solid;
+    display: inline-block;
+    cursor: pointer; 
+}
+
+.colors .active {
+    border: 2px rgb(101, 0, 180) solid;
+}
+
+.colors {
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px;
+}
+
+.colors .red {
+    background: red;
+}
+
+.colors .orange {
+    background: orange;
+}
+
+.colors .yellow {
+    background: yellow;
+}
+
+.colors .green {
+    background: green;
+}
+
+.colors .blue {
+    background: blue;
+}
+
+.colors .indigo {
+    background: indigo;
+}
+
+.colors .violet {
+    background: violet;
+}
+
+.colors .black {
+    background: black;
+}
+
+.colors .gray {
+    background: gray;
+}
+
+.colors .white {
+    background: white;
+}
+
+/* Shift presing */
+.shift-active {
+     background: red;
+}
