@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+    function changeColor(element) {
+        var color = $(".colors .active").css("background-color");
+        element.css("color", color);
+    }
+
     var PRESSED_KEY_CODE = 16;
     var pressed = false;
     var activeShiftClass = "shift-active";
@@ -9,26 +15,21 @@ $(document).ready(function() {
             $(".shift-pressed").addClass(activeShiftClass);
         }
     });
-    
+
     $(document).on("keyup", function(e) {
         if (e.keyCode === PRESSED_KEY_CODE) {
             pressed = false;
             $(".shift-pressed").removeClass(activeShiftClass);
         }
     });
-    
-    $(".pixel").live("click", function() {
+
+    $(".container").on("click", ".pixel", function() {
         changeColor($(this));
     });
-    
-    $(".pixel").live("mouseenter", function() {
+
+    $(".container").on("mouseenter", ".pixel", function() {
         if (pressed) {
-            changeColor($(this));    
+            changeColor($(this));
         }
     });
 });
-
-function changeColor(element) {
-    var color = $(".colors .active").css("background-color");
-    element.css("color", color);
-}

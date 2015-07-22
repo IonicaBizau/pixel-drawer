@@ -1,13 +1,3 @@
-/*
-   Author: Ionica Bizau
-   Email: bizauionica@gmail.com
-   Copyright (C) 2013 Ionica Bizau
-   Under GNU License
-   -------------------------------
-   STYLES FOR ASCII DRAW PROJECT
-   -------------------------------
-*/
-
 /* general */
 input[type="text"] {
     height: 30px;
@@ -17,11 +7,16 @@ body {
     background: url("../img/bg.png");
 }
 
+p, h1, h2, h3, h4, h5, h6, input, button {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
 .dotted-blue {
-    border: 2px darkblue dotted;
-    background: lightblue;
+    border: 1px rgba(182, 182, 182, 0.56) solid;
+    background: rgba(255, 255, 255, 0.68);
     padding: 20px;
-    margin: 5px;
+    margin: 30px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 /*
@@ -36,11 +31,9 @@ body {
 }
 
 .canvas {
-    font-family: monospace;
     margin: 15px;
-        
     /* Unselectable text */
-    -webkit-user-select: none; /* Chrome/Safari */        
+    -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
 }
@@ -49,7 +42,8 @@ body {
     display: inline-block;
     font-size: 18px;
     cursor: crosshair;
-    
+    margin-bottom: -10px;
+
 }
 
 .template {
@@ -74,7 +68,7 @@ textarea {
     margin: 2px;
     border: 1px #aaa solid;
     display: inline-block;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .colors .active {
@@ -87,47 +81,47 @@ textarea {
     padding: 10px;
 }
 
+
+/* Shift presing */
+.shift-active,
 .colors .red {
-    background: red;
+    background: #c0392b;
 }
 
 .colors .orange {
-    background: orange;
+    background: #e67e22;
 }
 
 .colors .yellow {
-    background: yellow;
+    background: #f1c40f;
 }
 
 .colors .green {
-    background: green;
+    background: #2ecc71;
 }
 
 .colors .blue {
-    background: blue;
+    background: #3498db;
 }
 
 .colors .indigo {
-    background: indigo;
+    background: #9b59b6;
 }
 
 .colors .violet {
-    background: violet;
+    background: #8e44ad;
 }
 
 .colors .black {
-    background: black;
+    background: #2c3e50;
 }
 
 .colors .gray {
-    background: gray;
+    background: #bdc3c7;
 }
 
 .colors .white {
-    background: white;
+    background: #ecf0f1;
 }
 
-/* Shift presing */
-.shift-active {
-     background: red;
-}
+

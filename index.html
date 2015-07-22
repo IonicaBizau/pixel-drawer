@@ -1,36 +1,19 @@
-<!-- 
-    ================================================================
-    «                       ASCII DRAWINGS                         »
-    «                   ---------------------                      »
-    «                 Developed by Ionica Bizau                    »
-    «      OPEN SOURCE PROJECT ON http://github.com/IonicaBizau    »
-    «                                                              »
-    «                     UNDER GNU LICENSE                        »
-    «               COPYRIGHT (C) 2013 IONICA BIZAU                »
-    ================================================================
--->
-
 <html>
     <head>
-        <title>ASCII Draw</title>
+        <title>Pixel Drawings</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
         <script src="js/draw.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="container">
-            <h1 class="page-header">Make an ASCII picture online</h1>
-            
-            <!-- 
-                ================================================================
-                «                           COLORS                             »
-                «                 TODO: Maybe a color picker?                  »
-                ================================================================
-            -->
+            <h1 class="page-header text-center">Create Pixel Drawings</h1>
             <div class="colors dotted-blue">
                 <div class="color red"> </div>
                 <div class="color orange"> </div>
@@ -43,9 +26,9 @@
                 <div class="color gray"> </div>
                 <div class="color black active"> </div>
             </div>
-            
 
-            <!-- 
+
+            <!--
                 ================================================================
                 «   TWITTER BOOTSTRAP MODALS: DELTE, HTML-EXPORT, HTML-IMPORT  »
                 ================================================================
@@ -55,18 +38,18 @@
             <div class="modal hide fade" id="delete-modal">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3>Deleting this ASCII picture</h3>
+                    <h3>Deleting this pixel draw</h3>
                 </div>
                 <div class="modal-body">
-                    <p>Do you really want to delete this ASCII picture?</p>
-                    
+                    <p>Do you really want to delete this pixel drawing?</p>
+
                 </div>
                 <div class="modal-footer">
                     <button class="btn" data-dismiss="modal" aria-hidden="true">No</button>
                     <button class="btn btn-danger" id="delete-picture">Yes, delete it!</button>
                 </div>
             </div>
-             
+
             <!-- Export HTML -->
             <div class="modal hide fade" id="export-html-modal">
                 <div class="modal-header">
@@ -81,7 +64,7 @@
                     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                 </div>
             </div>
-            
+
             <!-- Export HTML -->
             <div class="modal hide fade" id="black-and-white-modal">
                 <div class="modal-header">
@@ -89,7 +72,7 @@
                     <h3>Converting to black and white</h3>
                 </div>
                 <div class="modal-body">
-                    <p>Do you really want to convert your ASCII picture into a black and white one?</p>
+                    <p>Do you really want to convert your pixel drawing into a black and white one?</p>
                     <p style="color:red"><strong>This cannot be undone.</strong></p>
                 </div>
                 <div class="modal-footer">
@@ -97,15 +80,15 @@
                     <button class="btn" id="convert-to-black-and-white" data-dismiss="modal" aria-hidden="true">Yes</button>
                 </div>
             </div>
-            
+
             <!-- Import HTML -->
             <div class="modal hide fade" id="import-html-modal">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3>Importing the ASCII drawing</h3>
+                    <h3>Importing the pixel drawing</h3>
                 </div>
                 <div class="modal-body">
-                    <p>Paste the HTML code that you want to import into an ASCII drawing.</p>
+                    <p>Paste the HTML code that you want to import into an pixel drawing.</p>
                     <textarea id="html-import-code"></textarea>
                 </div>
                 <div class="modal-footer">
@@ -114,13 +97,13 @@
                 </div>
             </div>
 
-            <!-- 
+            <!--
                 ================================================================
                 «                     « DRAWING AREA  »                        »
                 «                    template, drawing...                      »
                 ================================================================
             -->
-            
+
             <!-- Template for canvas -->
             <div class="template draw-area dotted-blue">
                 <div class="canvas">
@@ -129,7 +112,7 @@
                 <div class="settings">
                     <p>Press <pre class="shift-pressed">SHIFT</pre> for continous drawing.</p>
                     <button class="btn btn-danger delete">
-                        <i class="icon-white icon-remove"></i> Delete this ASCII picture
+                        <i class="icon-white icon-remove"></i> Delete this pixel drawing
                     </button>
                     <button class="btn btn-warning black-and-white">
                         <i class="icon-white icon-edit"></i> Convert to black and white
@@ -142,25 +125,25 @@
                     </button>
                 </div>
             </div>
-            
+
             <div class="drawing-area dotted-blue">
                 <div class="create-new">
                     <h2 class="page-header">Create a new drawing area or <span class="btn btn-import btn-primary">import one</span></h2>
                     <p>Complete the following information, and then click on the button bellow to create a new canvas.</p>
-                    
+
                     <table class="table table-bordered">
                         <tbody>
                             <tr>
                                 <td>Width</td>
-                                <td><input type="text" id="width" placeholder="30" value="30"/></td>
+                                <td><input class="form-control" type="number"  id="width" placeholder="30" value="30"/></td>
                             </tr>
                             <tr>
                                 <td>Height</td>
-                                <td><input type="text" id="height" placeholder="15" value="15"/></td>
+                                <td><input class="form-control" type="number" id="height" placeholder="15" value="15"/></td>
                             </tr>
                             <tr>
                                 <td>Color</td>
-                                <td><input type="text" id="color" placeholder="gray" value="gray"/></td>
+                                <td><input class="form-control" type="text" id="color" placeholder="gray" value="gray"/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -169,7 +152,7 @@
                         <i class="icon-plus icon-white"></i> New canvas
                     </button>
                 </div>
-            </div>    
+            </div>
         </div>
     </body>
 </html>
