@@ -1,0 +1,29 @@
+{
+  "name": "pixel-drawer",
+  "version": "1.1.0",
+  "description": "An app to draw pixel images.",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/ASCII-drawings-maker.git"
+  },
+  "keywords": [
+    "pixel",
+    "ascii",
+    "images",
+    "graphics"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "KINDLY",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/ASCII-drawings-maker/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/ASCII-drawings-maker#readme",
+  "blah": {
+    "ex_img": "http://i.imgur.com/UBWRSDU.png",
+    "ex_url": "http://ionicabizau.github.com/pixel-drawer"
+  }
+}
