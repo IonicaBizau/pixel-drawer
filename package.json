@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IonicaBizau/ASCII-drawings-maker.git"
+    "url": "git+https://github.com/IonicaBizau/pixel-drawer.git"
   },
   "keywords": [
     "pixel",
@@ -19,9 +19,9 @@
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "KINDLY",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/ASCII-drawings-maker/issues"
+    "url": "https://github.com/IonicaBizau/pixel-drawer/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/ASCII-drawings-maker#readme",
+  "homepage": "https://github.com/IonicaBizau/pixel-drawer#readme",
   "blah": {
     "ex_img": "http://i.imgur.com/UBWRSDU.png",
     "ex_url": "http://ionicabizau.github.com/pixel-drawer"
