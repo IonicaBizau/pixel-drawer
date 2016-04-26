@@ -1,6 +1,6 @@
 {
   "name": "pixel-drawer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "An app to draw pixel images.",
   "main": "convert.js",
   "scripts": {
@@ -25,5 +25,16 @@
   "blah": {
     "ex_img": "http://i.imgur.com/UBWRSDU.png",
     "ex_url": "http://ionicabizau.github.com/pixel-drawer"
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
