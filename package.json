@@ -1,6 +1,6 @@
 {
   "name": "pixel-drawer",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "An app to draw pixel images.",
   "main": "convert.js",
   "scripts": {
@@ -34,6 +34,7 @@
     "src/",
     "resources/",
     "menu/",
+    "scripts/",
     "cli.js",
     "index.js"
   ]
